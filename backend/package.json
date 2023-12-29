@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "<br /> <div align=\"center\">   <a href=\"https://github.com/EQITechG/TS_ToDo\">   </a>",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.ts",
     "start": "node .dist/src/index.ts",

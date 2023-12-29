@@ -32,12 +32,12 @@
         <li><a href="#installation">Installation</a></li>
         <li><a href="#incomplete-areas">Incomplete Areas</a></li>
         <li><a href="#understanding-completion">Understanding Completion</a></li>
-      
       </ul>
     </li>
   </ol>
 </details>
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 ToDo Application
 Server-Side (Node.js, TypeScript, Express) - API
@@ -74,11 +74,15 @@ Clone repo [https://github.com/EQITechG/TS_toDo.git](https://github.com/EQITechG
     ```sh
    npm install 
    ```
-2. Run app
+2. Initiate NPM 
+    ```sh
+   cd backend 
+   ```
+3. Run app
     ```sh
    yarn dev start ||  npm run dev
    ```
-3. Use app by visiting 
+4. Use app by visiting 
      ```sh
    localhost:3000 
    ```
