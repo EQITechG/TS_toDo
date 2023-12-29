@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "<br /> <div align=\"center\">   <a href=\"https://github.com/EQITechG/TS_ToDo\">   </a>",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "nodemon src/index.ts",
     "start": "node .dist/src/index.ts",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gabriel Asinugo",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
