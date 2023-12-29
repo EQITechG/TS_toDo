@@ -1,48 +1,47 @@
-import {Model, DataTypes } from "sequelize";
+import { Model, DataTypes } from "sequelize";
 import db from "../config/db.config";
 
-
 interface Todo {
-    id: string;
-    title: string;
-    description: string;
-    dueDate: Date;
-    ordinal: number;
-    status: boolean;
-  }
-export class TodoInstance extends Model <Todo> {}
+  id: string;
+  title: string;
+  description: string;
+  dueDate: Date;
+  ordinal: number;
+  status: boolean;
+}
+export class TodoInstance extends Model<Todo> {}
 
-TodoInstance.init({
+TodoInstance.init(
+  {
     id: {
-        type: DataTypes.UUIDV4,
-        primaryKey: true,
-        allowNull: false,
+      type: DataTypes.UUIDV4,
+      primaryKey: true,
+      allowNull: false,
     },
     title: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     description: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     dueDate: {
-        type: DataTypes.DATE,
-        allowNull: false,
+      type: DataTypes.DATE,
+      allowNull: false,
     },
     ordinal: {
-        type: DataTypes.NUMBER,
-        allowNull: false,
+      type: DataTypes.NUMBER,
+      allowNull: false,
     },
     status: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: false,
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
     },
-}, 
-{
+  },
+  {
     sequelize: db,
-    tableName: 'todos',
-
-}
+    tableName: "todos",
+  }
 );
