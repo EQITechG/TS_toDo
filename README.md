@@ -18,4 +18,21 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 ToDo Application
-View Backend and Frontend README above.
+
+## Total Time spent on task
+Approximately 10 hours.
+
+## The acceptance criteria are:
+1. A user must be able to see their list of todos
+2. Completed todos should not be shown in the list by default
+3. It must be possible to show the completed todos
+4. A user must be able to create a new todo
+5. A user must be able to edit a todo
+6. A user must be able to delete a todo
+7. A user must be able to complete a todo
+8. A user must be able to incomplete a todo
+
+
+## Reflection
+* Acceptance criteria acheived, 
+* Could have done thorough edge case testing 

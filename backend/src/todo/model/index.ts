@@ -1,6 +1,6 @@
 import { Model, DataTypes } from "sequelize";
 import db from "../../config/db.config";
-
+//Initialise Model Schema
 interface Todo {
   id: string;
   title: string;

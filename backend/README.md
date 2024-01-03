@@ -43,7 +43,7 @@ ToDo Application
 Server-Side (Node.js, TypeScript, Express) - API
 
 ## Time spent on task
-Approximately 8 hours.
+Approximately 4 hours.
 
 
 ### Built With
@@ -84,7 +84,7 @@ Clone repo [https://github.com/EQITechG/TS_toDo.git](https://github.com/EQITechG
    ```
 4. Use app by visiting 
      ```sh
-   localhost:3000 
+   localhost:3001
    ```
 
 ### Incomplete Areas

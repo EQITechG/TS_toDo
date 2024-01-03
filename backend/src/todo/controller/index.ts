@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { TodoInstance } from "../model";
 
-
+//Crud controller
 class ToDoController {
   async create(req: Request, res: Response) {
     try {
@@ -63,7 +63,7 @@ class ToDoController {
     }
   }
 
-  //Route to change status boolean
+  //Change status boolean
 
   async  status(req: Request, res: Response) {
     try {
@@ -85,7 +85,7 @@ class ToDoController {
       });
     }
   }
-  //Route to update toDo records
+  //update toDo records
 
   async update(req: Request, res: Response) {
     try {
