@@ -4,6 +4,8 @@ import db from "./config/db.config";
 import toDoRouter from "./todo/routes";
 import cors from "cors";
 
+
+
 //connecting to database
 db.sync().then(() => {
   console.log("connected to database");
@@ -14,5 +16,6 @@ app.use(cors())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/todos",toDoRouter);
+
 
 export default app;

@@ -1,5 +1,7 @@
-import { Request, Response } from "express";
+import { Request, Response, query } from "express";
 import { TodoInstance } from "../model";
+
+
 
 //Crud controller
 class ToDoController {
@@ -94,8 +96,8 @@ class ToDoController {
       if (!toDoRecords) {
         return res.json({ msg: "Cannot find todo ID" });
       }
-      const updatedToDORecord = await toDoRecords.update({ ...req.body });
-      return res.json(updatedToDORecord);
+      const updatedToDoRecord = await toDoRecords.update({ ...req.body });
+      return res.json(updatedToDoRecord);
     } catch (e) {
       return res.json({
         msg: "Failed to update todo",
@@ -126,7 +128,71 @@ class ToDoController {
   }
 
   sendAll(req: Request, res: Response) {
-    return res.send("Status: 200");
+
+    const stringQuery = req.params.toString();
+    console.log(stringQuery)
+    // if (stringQuery !== ""){
+      if (stringQuery !== 'completed' || 'read' || 'incomplete' || 'create' || 'delete' || 'status' || 'update'){
+      return res.json({ 
+        msg:"Please enter a valid query route", 
+        status: 404, 
+
+      });
+    }
+    // else {
+    //   return res.send("Status: 200");
+    // }
+   
+    //if empty = enter router
+    // if route is entered do something
+    //if route is wrong say there is no such route
+
+
+  }
+  checkAll(req: Request, res: Response) {
+    
+    const stringQuery = JSON.stringify(req.params[0]);
+    console.log(JSON.stringify(req.params[0]))
+
+    // if (JSON.stringify(req.query) === '{}'){
+    //     return res.json({
+    //       Status:"200",
+    //       Message: "Server is running\n Enter a Route",
+    //   })
+    //   }
+      
+       if (stringQuery !== 'completed' || 'read' || 'incomplete' || 'create' || 'delete' || 'status' || 'update'){
+        
+        return res.json({
+          Status:"200",
+          Message: "Not a valid route",
+      })
+
+      }else if (JSON.stringify(req.params[0]) === ''){
+            return res.json({
+              Status:"200",
+              Message: "Server is running\n Enter a Route",
+          })
+          }
+
+
+      // else if (JSON.stringify(req.query) === '{}'){
+
+      // }
+
+   
+
+
+
+    // console.log(req.query)
+    // if (JSON.stringify(req.query) === '{}'){
+    //   return res.send("Status:200")
+    // }
+    // return res.json({
+    //   Status: 200,
+    //   msg: 'Server is active, enter desired route'
+    // })
+   
   }
 }
 

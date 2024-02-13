@@ -130,7 +130,7 @@ const EditTodoForm: React.FC<EditTodoFormProps> = ({
             onChange={handleDateChange}
             showTimeSelect
             dateFormat="dd/MM/yyyy h:mm aa"
-            placeholderText="Select a date & time"
+            // placeholderText="Select a date & time"
           />
         </label>
         {validationError && <div style={{ color: 'red' }}>{validationError}</div>}

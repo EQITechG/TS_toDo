@@ -57,6 +57,14 @@ class TodoValidator {
         .withMessage("The value should be UUID v4"),
     ];
   }
+  checkQuery() {
+
+    return [
+      query("query")
+        .notEmpty()
+        .withMessage("Query Can't be empty"),
+    ];
+  }
 }
 
 export default new TodoValidator();

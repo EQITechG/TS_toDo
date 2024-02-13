@@ -45,7 +45,12 @@ router.delete(
   ToDoController.delete
 );
 
-router.get("/", ToDoController.sendAll);
+// router.get("/:id",
+// // TodoValidator.checkQuery(), 
+// ToDoController.sendAll);
+router.get("/*",
+// TodoValidator.checkQuery(), 
+ToDoController.checkAll);
 
 
 export default router;
